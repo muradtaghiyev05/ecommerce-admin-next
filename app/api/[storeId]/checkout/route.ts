@@ -1,8 +1,11 @@
 import Stripe from "stripe";
 import { NextResponse } from "next/server";
+import dotenv from "dotenv";
 
 import { stripe } from "@/lib/stripe";
 import prismadb from "@/lib/prismadb";
+
+dotenv.config();
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
